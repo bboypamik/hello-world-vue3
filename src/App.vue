@@ -1,6 +1,8 @@
 <template>
   <h1>Hello-World</h1>
-  <p>My name is {{myName}} and my dog name is {{myDog}}</p>
+  <p v-once>My name is {{myName}} and my dog name is {{myDog}}</p>
+  <button @click="helloWorld">click me yayayay</button>
+  <p>{{myName}}</p>
 </template>
 
 <script>
@@ -14,8 +16,14 @@ export default {
     }
   },
 
+  methods: {
+    helloWorld(){
+      alert('I am available')
+    }
+  },
+
   mounted(){
-    console.log(this.myName)
+    this.myName ='tandom'
   }
 }
 </script>
